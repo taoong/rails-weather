@@ -1,4 +1,6 @@
 class ApiClient
+  
+  
   def initialize
     conn = Faraday.new(:url => '') do |faraday|
       faraday.response :logger
