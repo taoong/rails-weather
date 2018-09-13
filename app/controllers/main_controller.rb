@@ -3,7 +3,8 @@ require_relative "../services/weather_service"
 class MainController < ApplicationController
 
   def index
-    @w = JSON.parse WeatherService.get(params[:city])
+    # Uncomment and pass a parameter to the get function
+    # @w = JSON.parse WeatherService.get()
   end
 
 end
