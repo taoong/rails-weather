@@ -9,6 +9,11 @@ class WeatherService
     res = Net::HTTP.start(url.host, url.port) {|http|
       http.request(req)
     }
-    res.body
+    data = JSON.parse res.body
+    {
+      temperature: data["main"]["temp"],
+      description: data["weather"][0]["description"],
+      city: data["name"]
+    }
   end
 end
