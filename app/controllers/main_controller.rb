@@ -1,8 +1,9 @@
+require_relative "../services/weather_service"
+
 class MainController < ApplicationController
 
   def index
-    # Your code here
-    puts weaparams[:city]
+    @w = JSON.parse WeatherService.get(params[:city])
   end
 
 end
