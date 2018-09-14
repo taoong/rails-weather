@@ -4,7 +4,7 @@ class MainController < ApplicationController
 
   def index
     # Uncomment and pass a parameter to the get function
-    # @w = JSON.parse WeatherService.get()
+    # @w = WeatherService.get()
   end
 
 end
