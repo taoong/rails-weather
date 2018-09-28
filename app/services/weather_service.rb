@@ -10,6 +10,9 @@ class WeatherService
       http.request(req)
     }
     data = JSON.parse res.body
+    if not data["main"]
+      return nil
+    end
     {
       temperature: data["main"]["temp"],
       description: data["weather"][0]["description"],
