@@ -1,7 +1,8 @@
 class CitiesController < ApplicationController
 
   def view
-    @cities = ["Berkeley"]
+    @cities = City.all.to_a
+    @w = WeatherService.get(params[:city])
     render 'view'
   end
   
