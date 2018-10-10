@@ -1,19 +1,16 @@
 class CitiesController < ApplicationController
 
-  def index
-    @w = WeatherService.get(params[:city])
-    if @w
-      # Bonus: Converting Kelvin to Fahrenheit
-      @temperature = (9 / 5) * (@w[:temperature] - 273) + 32
-      # Create a new city
-      city = City.new(
-        name: params[:city],
-        temperature: @temperature, # Using the converted temperature
-        description: @w[:description]
-      )
-      # Save the city so that it's in City.all
-      city.save
-    end
-  end  
+  def view
+    render 'home'
+  end
+  
+  def new
+  end
+  
+  def create
+  end
+  
+  def update
+  end
 
 end
