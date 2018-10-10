@@ -1,8 +1,15 @@
+<% if @w %>
 <h1>
-  Helloo
+  hi
 </h1>
+  <h1> <%= @w.name %>  </h1>
+  <p> <%= @w.landmark %>  </p>
+  <p> <%= @w.population %>  </p>
+  <p> <%= @w.temperature %>  </p>
+<% end %>
 <% @cities.each do |city| %>
-  <h1>
-    <%= city.na %>  
-  </h1>
+  <h1> <%= city.name %>  </h1>
+  <p> <%= city.landmark %>  </p>
+  <p> <%= city.population %>  </p>
+  <p> <%= city.temperature %>  </p>
 <% end %>
