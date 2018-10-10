@@ -1,8 +1,15 @@
 <h1>
-  New
+  Create a new city
 </h1>
 
 <%= form_with local: true, method: "get" do |f| %>
-  <%= f.text_field :city %>
+  <h3>Name</h3>
+  <%= f.text_field :name %>
+  <h3>Landmark</h3>
+  <%= f.text_field :landmark %>
+  <h3>Population</h3>
+  <%= f.text_field :population %>
+  <h3>Temperature</h3>
+  <%= f.text_field :temperature %>
   <%= f.submit %>
 <% end %>
