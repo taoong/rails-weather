@@ -1,11 +1,8 @@
 <% if @w %>
-<h1>
-  hi
-</h1>
-  <h1> <%= @w.name %>  </h1>
-  <p> <%= @w.landmark %>  </p>
-  <p> <%= @w.population %>  </p>
-  <p> <%= @w.temperature %>  </p>
+  <h1> Name: <%= @w[:name] %>  </h1>
+  <p> Description: <%= @w[:description] %>  </p>
+  <p> Population: <%= @w[:population] %>  </p>
+  <p> Temperature: <%= @w[:temperature] %>  </p>
 <% end %>
 <% @cities.each do |city| %>
   <h1> <%= city.name %>  </h1>
