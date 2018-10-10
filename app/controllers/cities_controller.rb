@@ -1,6 +1,7 @@
 class CitiesController < ApplicationController
 
   def view
+    @cities = ["Berkeley"]
     render 'view'
   end
   
