@@ -1,10 +1,10 @@
 <h1>
-  Updating City Information
+  Updating <%= @name %> City Information
 </h1>
 
-<%= form_with url: cities_create_path, local: true, method: "post" do |f| %>
+<%= form_with url: cities_update_path, local: true, method: "post" do |f| %>
   <h3>Name</h3>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, value: @name %>
   <h3>Most Popular Landmark</h3>
   <%= f.text_field :landmark %>
   <h3>Population</h3>

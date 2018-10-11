@@ -21,11 +21,14 @@ class CitiesController < ApplicationController
   end
   
   def update
+    if params and 
     render 'update'
   end
   
   def updateCity
-    
+    if params and City.all.key?(params[:name].to_sym)
+      City.all[params[:name]].update(params)
+    end
     redirect_to '/cities/view'
   end
 
