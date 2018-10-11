@@ -5,7 +5,10 @@
   <p> Weather: <%= @w[:weather] %>  </p>
 <% end %>
 <% City.all.each do |city| %>
-  <p>
-    1
-</p>
+  <% if not city.nil? %>
+    <h1> <%= city.name %>  </h1>
+    <p> <%= city.landmark %>  </p>
+    <p> <%= city.population %>  </p>
+    <p> <%= city.weather %>  </p>
+  <% end %>
 <% end %>
