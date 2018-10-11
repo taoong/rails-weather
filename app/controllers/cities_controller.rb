@@ -11,7 +11,7 @@ class CitiesController < ApplicationController
   end
   
   def create
-    
+    @city = params
   end
   
   def update

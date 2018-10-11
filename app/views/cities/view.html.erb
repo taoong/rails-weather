@@ -2,11 +2,11 @@
   <h1> Name: <%= @w[:name] %>  </h1>
   <p> Description: <%= @w[:landmark] %>  </p>
   <p> Population: <%= @w[:population] %>  </p>
-  <p> Temperature: <%= @w[:temperature] %>  </p>
+  <p> Weather: <%= @w[:weather] %>  </p>
 <% end %>
 <% @cities.each do |city| %>
   <h1> <%= city.name %>  </h1>
   <p> <%= city.landmark %>  </p>
   <p> <%= city.population %>  </p>
-  <p> <%= city.temperature %>  </p>
+  <p> <%= city.weather %>  </p>
 <% end %>
