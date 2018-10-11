@@ -1,14 +1,14 @@
 <% if @w %>
   <h1> Name: <%= @w[:name] %>  </h1>
-  <p> Description: <%= @w[:landmark] %>  </p>
+  <p> Key Landmark: <%= @w[:landmark] %>  </p>
   <p> Population: <%= @w[:population] %>  </p>
-  <p> Weather: <%= @w[:weather] %>  </p>
+  <p> Temperature: <%= @w[:temperature] %>  </p>
 <% end %>
 <% @cities.each do |name, city| %>
   <% if not city.nil? %>
     <h1> <%= name %>  </h1>
-    <p> <%= city.landmark %>  </p>
-    <p> <%= city.population %>  </p>
-    <p> <%= city.weather %>  </p>
+    <p> Key Landmark: <%= city.landmark %>  </p>
+    <p> Population: <%= city.population %> </p>
+    <p> Temperature: <%= city.temperature %>°F </p>
   <% end %>
 <% end %>

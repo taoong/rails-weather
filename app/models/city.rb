@@ -1,5 +1,5 @@
 class City
-	attr_accessor :name, :landmark, :population, :weather
+	attr_accessor :name, :landmark, :population, :weather, :temperature
 	$cities = {}
 	
 	def initialize(city_params)
@@ -7,6 +7,7 @@ class City
 		@landmark = city_params[:landmark]
 		@population = city_params[:population]
 		@weather = WeatherService.get(@name)
+    @temperature = (9 / 5) * (@weather[:temperature] - 273) + 32
 	end
 
 	def save
