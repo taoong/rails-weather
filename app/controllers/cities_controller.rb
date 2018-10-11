@@ -16,7 +16,6 @@ class CitiesController < ApplicationController
       @temperature = (9 / 5) * (@w[:temperature] - 273) + 32
       city = City.new(params)
       city.save
-      # redirect to view
       redirect_to '/cities/view'
     end
   end
