@@ -13,9 +13,7 @@ class CitiesController < ApplicationController
   end
   
   def create
-    @w = WeatherService.get(params[:name])
-    if @w
-      @temperature = (9 / 5) * (@w[:temperature] - 273) + 32
+    if params
       city = City.new(params)
       city.save
       redirect_to '/cities/view'

@@ -1,8 +1,8 @@
 <% if @city %>
-  <h1> Name: <%= @city %>  </h1>
-  <p> Key Landmark: <%= @city %>  </p>
-  <p> Population: <%= @city %>  </p>
-  <p> Temperature: <%= @city %>  </p>
+  <h1> <%= @city.name %>  </h1>
+  <p> Key Landmark: <%= @city.landmark %>  </p>
+  <p> Population: <%= @city.population %>  </p>
+  <p> Temperature: <%= @city.temperature %>°F </p>
 <% else %>
   <% @cities.each do |name, city| %>
     <% if not city.nil? %>
