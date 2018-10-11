@@ -13,14 +13,19 @@ class CitiesController < ApplicationController
   end
   
   def create
-    if params
+    if params and not City.all.key?(params[:name].to_sym)
       city = City.new(params)
       city.save
-      redirect_to '/cities/view'
     end
+    redirect_to '/cities/view'
   end
   
   def update
+    render 'update'
+  end
+  
+  def updateCity
+    
     redirect_to '/cities/view'
   end
 
