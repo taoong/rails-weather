@@ -1,9 +1,9 @@
-<% City.all.each do |c| %>
-  <% if not c.nil? %>
-    <h1> <%= c.name %></h1>
+<% City.all.each do |name, city| %>
+  <% if not city.nil? %>
+    <h1> <%= city.name %></h1>
     <p>
-      It's <%= c.temperature %>°F
-      and it looks like <%= c.description %>
+      It's <%= city.temperature %>°F
+      and it looks like <%= city.description %>
     </p>
   <% end %>
 <% end %>
