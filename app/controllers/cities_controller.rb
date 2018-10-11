@@ -11,8 +11,9 @@ class CitiesController < ApplicationController
   end
   
   def create
-    if params
-      @temperature = (9 / 5) * (params[:temperature] - 273) + 32
+    @w = WeatherService.get(params[:name])
+    if @w
+      @temperature = (9 / 5) * (@w[:temperature] - 273) + 32
       city = City.new(
           name: params[:name],
           landmark: params[:landmark],
@@ -21,6 +22,7 @@ class CitiesController < ApplicationController
         )
       city.save
       # redirect to view
+      render 'view'
     end
   end
   
