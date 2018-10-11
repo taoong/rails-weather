@@ -22,7 +22,7 @@ class CitiesController < ApplicationController
         )
       city.save
       # redirect to view
-      render 'view'
+      redirect_to view
     end
   end
   
