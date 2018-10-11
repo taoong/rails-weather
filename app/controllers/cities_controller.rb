@@ -21,7 +21,7 @@ class CitiesController < ApplicationController
   end
   
   def update
-    render 'update'
+    redirect_to '/cities/view'
   end
 
 end
