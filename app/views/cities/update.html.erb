@@ -1,3 +1,13 @@
 <h1>
-  Update
+  Updating City Information
 </h1>
+
+<%= form_with url: cities_create_path, local: true, method: "post" do |f| %>
+  <h3>Name</h3>
+  <%= f.text_field :name %>
+  <h3>Most Popular Landmark</h3>
+  <%= f.text_field :landmark %>
+  <h3>Population</h3>
+  <%= f.number_field :population %>
+  <%= f.submit %>
+<% end %>
