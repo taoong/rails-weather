@@ -20,10 +20,10 @@ class City
 
 	def update(update_params)
     @name = update_params[:name]
-		if update_params[:landmark]
+		if update_params[:landmark] != ""
       @landmark = update_params[:landmark]
     end
-    if update_params[:population]
+    if update_params[:population] != ""
       @population = update_params[:population]
     end
     $cities[@name.to_sym] = self
