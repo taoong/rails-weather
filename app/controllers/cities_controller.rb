@@ -2,9 +2,9 @@ class CitiesController < ApplicationController
 
   def view
     @cities = City.all.to_a
-    if Cities.key?(params[:city]])
-      
-    
+    if params[:city] and City.all.key?(params[:city].to_sym)
+      @city = City.all[params[:city].to_sym]
+    end
     render 'view'
   end
   
