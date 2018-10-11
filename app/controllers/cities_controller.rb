@@ -2,7 +2,9 @@ class CitiesController < ApplicationController
 
   def view
     @cities = City.all.to_a
-    @w = WeatherService.get(params[:city])
+    if Cities.key?(params[:city]])
+      
+    
     render 'view'
   end
   
