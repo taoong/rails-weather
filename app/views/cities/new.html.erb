@@ -2,7 +2,7 @@
   Create a new city
 </h1>
 
-<%= form_with local: true, method: "get" do |f| %>
+<%= form_with url: cities_create_path, local: true, method: "get" do |f| %>
   <h3>Name</h3>
   <%= f.text_field :name %>
   <h3>Most Popular Landmark</h3>
