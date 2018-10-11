@@ -4,11 +4,11 @@
   <p> Population: <%= @w[:population] %>  </p>
   <p> Weather: <%= @w[:weather] %>  </p>
 <% end %>
-<% @cities.each do |city| %>
+<% @cities.each do |name, city| %>
   <% if not city.nil? %>
-    <h1> <%= city.name %>  </h1>
-    <p> <%= city %>  </p>
-    <p> <%= city %>  </p>
-    <p> <%= city %>  </p>
+    <h1> <%= name %>  </h1>
+    <p> <%= city.landmark %>  </p>
+    <p> <%= city.population %>  </p>
+    <p> <%= city.weather %>  </p>
   <% end %>
 <% end %>
