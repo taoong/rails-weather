@@ -12,6 +12,7 @@ class CitiesController < ApplicationController
   
   def create
     @city = params
+    # redirect to view
   end
   
   def update
