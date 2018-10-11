@@ -7,7 +7,7 @@
 <% City.all.each do |city| %>
   <% if not city.nil? %>
     <% puts city %>
-    <h1> <%= city[name] %>  </h1>
+    <h1> <%= city[:name.to_s] %>  </h1>
     <p> <%= city.landmark %>  </p>
     <p> <%= city.population %>  </p>
     <p> <%= city.weather %>  </p>
