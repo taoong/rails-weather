@@ -4,12 +4,20 @@
   <p> Population: <%= @city.population %>  </p>
   <p> Temperature: <%= @city.temperature %>°F </p>
 <% else %>
-  <% @cities.each do |name, city| %>
-    <% if not city.nil? %>
-      <h1> <%= name %>  </h1>
-      <p> Key Landmark: <%= city.landmark %>  </p>
-      <p> Population: <%= city.population %> </p>
-      <p> Temperature: <%= city.temperature %>°F </p>
+  <% if @cities.size > 0 %>
+    <h1> All Cities </h1>
+    <h3> To create a new city, go to /cities/new and fill out the city fields. </h3>
+    <hr>
+    <% @cities.each do |name, city| %>
+      <% if not city.nil? %>
+        <h3> <%= name %>  </h3>
+        <p> Key Landmark: <%= city.landmark %>  </p>
+        <p> Population: <%= city.population %> </p>
+        <p> Temperature: <%= city.temperature %>°F </p>
+      <% end %>
     <% end %>
+  <% else %>
+    <h1> There are currently no cities! </h1>
+    <h3> To create a new city, go to /cities/new and fill out the city fields. </h3>
   <% end %>
 <% end %>
