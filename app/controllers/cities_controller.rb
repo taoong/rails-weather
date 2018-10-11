@@ -21,7 +21,6 @@ class CitiesController < ApplicationController
   end
   
   def update
-    if params and 
     render 'update'
   end
   

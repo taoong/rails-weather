@@ -4,7 +4,7 @@
 
 <%= form_with url: cities_update_path, local: true, method: "post" do |f| %>
   <h3>Name</h3>
-  <%= f.text_field :name, value: @name %>
+  <%= f.text_field :name %>
   <h3>Most Popular Landmark</h3>
   <%= f.text_field :landmark %>
   <h3>Population</h3>
