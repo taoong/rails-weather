@@ -14,15 +14,10 @@ class CitiesController < ApplicationController
     @w = WeatherService.get(params[:name])
     if @w
       @temperature = (9 / 5) * (@w[:temperature] - 273) + 32
-      city = City.new(
-          name: params[:name],
-          landmark: params[:landmark],
-          population: params[:population],
-          weather: @temperature
-        )
+      city = City.new(params)
       city.save
       # redirect to view
-      redirect_to new and return
+      redirect_to '/cities/view'
     end
   end
   
