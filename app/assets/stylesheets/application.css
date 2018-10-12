@@ -42,12 +42,14 @@
 .btn {
   padding: 5px 5px 5px 5px;
   border: 1px solid #666;
-  color:#000;
-  animation: 
+  color: black;
+  background-color: white;
+  transition: all 200ms;
+  border-radius: 4px;
 }
 
 .btn:hover {
-  background-color:
-  text-decoration: none;
+  color: white;
+  background-color: #0078e8;
 }
   
