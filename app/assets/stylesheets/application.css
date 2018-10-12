@@ -17,8 +17,26 @@
   font-family: Avenir, Lato, BlinkMacSystemFont, sans-serif;
 }
 
+.container {
+  margin: auto;
+  width: 50%;
+  padding: 16px;
+}
+
+#cities-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.4);
+	margin: 8px;
+  border-radius: 4px;
+  padding: 16px;
+}
+
 .form {
-  margin: 20px; 
+  margin: 16px;
 }
 
 .btn:hover {
