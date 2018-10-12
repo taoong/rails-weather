@@ -7,6 +7,7 @@
   <% if @cities.size > 0 %>
     <h1> All Cities </h1>
     <h3> To create a new city, go to /cities/new </h3>
+    <%= link_to "Create new city", { :controller => "cities", :action => "new"}, html: {class: "btn"} %>
     <h3> To update an existing city, go to /cities/update </h3>
     <hr>
     <% @cities.each do |name, city| %>
