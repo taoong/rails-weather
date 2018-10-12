@@ -13,7 +13,7 @@ class CitiesController < ApplicationController
   end
   
   def create
-    if params and not City.all.key?(params[:name].to_sym)
+    if params[:name] != "" and not City.all.key?(params[:name].to_sym)
       city = City.new(params)
       city.save
     end
